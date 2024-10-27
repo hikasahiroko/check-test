@@ -1,15 +1,49 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="ja">
 
-@section('css')
-<link rel="stylesheet" href="{{ asset('css/login.css') }}">
-@endsection
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Management</title>
+  <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/common.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+</head>
 
-@section('content')
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <div class="header-utilities">
+        <a class="header__logo" href="/">
+          Attendance Management
+        </a>
+        <nav>
+          <ul class="header-nav">
+            @if (Auth::check())
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="/mypage">マイページ</a>
+            </li>
+            <li class="header-nav__item">
+              <form class="form" action="/logout" method="post">
+                @csrf
+                <button class="header-nav__button">ログアウト</button>
+              </form>
+            </li>
+            @endif
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+<main>
 <div class="login__content">
   <div class="login-form__heading">
     <h2>ログイン</h2>
   </div>
-  <form class="form">
+  <form class="form" action="/login" method="post">
+    @csrf
     <div class="form__group">
       <div class="form__group-title">
         <span class="form__label--item">メールアドレス</span>
@@ -48,4 +82,6 @@
     <a class="register__button-submit" href="/register">会員登録の方はこちら</a>
   </div>
 </div>
-@endsection
+</main>
+</body>
+</html>

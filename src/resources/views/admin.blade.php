@@ -1,10 +1,40 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="ja">
 
-@section('css')
-<link rel="stylesheet" href="{{ asset('css/index.css') }}">
-@endsection
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Management</title>
+  <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/common.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+</head>
 
-@section('content')
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <div class="header-utilities">
+        <a class="header__logo" href="/">
+          Attendance Management
+        </a>
+        <nav>
+          <ul class="header-nav">
+            @if (Auth::check())
+            <li class="header-nav__item">
+              <form class="form" action="/logout" method="post">
+                @csrf
+                <button class="header-nav__button">ログアウト</button>
+              </form>
+            </li>
+            @endif
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
 <div class="todo__alert">
   <div class="todo__alert--success">
     Todoを作成しました
@@ -66,4 +96,7 @@
     </table>
   </div>
 </div>
-@endsection
+</main>
+</body>
+
+</html>
