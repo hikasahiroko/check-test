@@ -47,9 +47,9 @@
             <span class="form__label--required">※</span>
           </div>
           <div class="form__group-content">
-              <input type="radio" name="gender" value="1" class="radio02-input in_top" id="radio03-01" /><label for="radio03-01">男性</label>
-              <input type="radio" name="gender" value="1" class="radio02-input in_top" id="radio03-02" /><label for="radio03-02">女性</label>
-              <input type="radio" name="gender" value="1" class="radio02-input in_top" id="radio03-03" /><label for="radio03-03">その他</label>
+              <input type="radio" name="gender" value="男性" class="radio02-input in_top" id="radio03-01" /><label for="radio03-01">男性</label>
+              <input type="radio" name="gender" value="女性" class="radio02-input in_top" id="radio03-02" /><label for="radio03-02">女性</label>
+              <input type="radio" name="gender" value="その他" class="radio02-input in_top" id="radio03-03" /><label for="radio03-03">その他</label>
             <div class="form__error">
               <!--バリデーション機能を実装したら記述します。-->
             </div>
@@ -76,7 +76,11 @@
           </div>
           <div class="form__group-content">
             <div class="form__input--text">
-              <input type="tel" name="tel" placeholder="09012345678" />
+              <input type="tel" name="tel_first" placeholder="080" />
+              -
+              <input type="tel" name="tel_second" placeholder="1234" />
+              -
+              <input type="tel" name="tel_third" placeholder="5678" />
             </div>
             <div class="form__error">
               <!--バリデーション機能を実装したら記述します。-->
@@ -116,7 +120,7 @@
             <span class="form__label--required">※</span>
           </div>
           <div class="form__group-content">
-              <select name="ご用件">
+              <select name="select">
                 <option value="">選択してください</option>
                 <option value="1.商品のお届けについて">1.商品のお届けについて</option>
                 <option value="2.商品の交換について">2.商品の交換について</option>
