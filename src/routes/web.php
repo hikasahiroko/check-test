@@ -21,3 +21,4 @@ Route::get('/admin', [AuthController::class, 'index']);
 Route::middleware('auth')->group(function () {
     Route::get('/admin', [AuthController::class, 'index']);
 });
+Route::get('/thanks', [ContactController::class, 'store']);//表示するためだけに追加したため後で削除すること

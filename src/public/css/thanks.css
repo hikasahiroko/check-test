@@ -1,14 +1,21 @@
-.header {
-    background: #000;
+.thanks__background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.header__inner {
+.button {
     margin: 0 auto;
-    padding: 20px 15px;
-    max-width: 1230px;
+    width: 140px;
+    height: 46px;
+    text-align: center;
+    line-height: 46px;
+    gap: 10px;
+    opacity: 0px;
+    background: #82756A;
 }
 
-.header__logo {
+.button__logo {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -16,12 +23,14 @@
 }
 
 .thanks__content {
-    margin: 0 auto;
+    margin: 30% auto;
     padding: 30px 15px;
     max-width: 1230px;
+    align-items: center;
 }
 
 .thanks__heading {
+    color: #8B7969;
     margin-bottom: 40px;
     text-align: center;
 }

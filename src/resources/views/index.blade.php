@@ -76,11 +76,7 @@
           </div>
           <div class="form__group-content">
             <div class="form__input--text">
-              <input type="tel" name="tel_first" placeholder="080" />
-              -
-              <input type="tel" name="tel_second" placeholder="1234" />
-              -
-              <input type="tel" name="tel_third" placeholder="5678" />
+              <input type="tel" name="tel" placeholder="08012345678" />
             </div>
             <div class="form__error">
               <!--バリデーション機能を実装したら記述します。-->

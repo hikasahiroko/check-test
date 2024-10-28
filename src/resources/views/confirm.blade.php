@@ -65,6 +65,12 @@
               </td>
             </tr>
             <tr class="confirm-table__row">
+              <th class="confirm-table__header">お問い合わせの種類</th>
+              <td class="confirm-table__text">
+                <input type="text" name="select" value="{{ $contact['select'] }}" readonly />
+              </td>
+            </tr>
+            <tr class="confirm-table__row">
               <th class="confirm-table__header">お問い合わせ内容</th>
               <td class="confirm-table__text">
                 <input type="text" name="content" value="{{ $contact['content'] }}" readonly />
@@ -74,6 +80,7 @@
         </div>
         <div class="form__button">
           <button class="form__button-submit" type="submit">送信</button>
+          <button type="submit" name='back' value="back">修正</button>
         </div>
       </form>
     </div>
