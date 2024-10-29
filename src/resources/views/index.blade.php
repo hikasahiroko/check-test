@@ -37,7 +37,12 @@
               <input type="text" name="last_name" placeholder="例：太郎" />
             </div>
             <div class="form__error">
-            
+            @error('first_name')
+              {{ $message }} 
+            @enderror
+            @error('last_name')
+              {{ $message }} 
+            @enderror
             </div>
           </div>
         </div>
@@ -51,7 +56,9 @@
               <input type="radio" name="gender" value="女性" class="radio02-input in_top" id="radio03-02" /><label for="radio03-02">女性</label>
               <input type="radio" name="gender" value="その他" class="radio02-input in_top" id="radio03-03" /><label for="radio03-03">その他</label>
             <div class="form__error">
-              
+            @error('gender')
+              {{ $message }} 
+            @enderror
             </div>
           </div>
         </div>
@@ -65,7 +72,9 @@
               <input type="email" name="email" placeholder="例：test@example.com" />
             </div>
             <div class="form__error">
-              
+            @error('email')
+              {{ $message }}
+            @enderror
             </div>
           </div>
         </div>
@@ -79,7 +88,9 @@
               <input type="tel" name="tel" placeholder="08012345678" />
             </div>
             <div class="form__error">
-              
+            @error('tel')
+              {{ $message }}
+            @enderror
             </div>
           </div>
         </div>
@@ -94,7 +105,9 @@
               <input type="text" name="address" placeholder="例：東京都渋谷区千駄ヶ谷1−2−3" />
             </div>
             <div class="form__error">
-              
+            @error('address')
+              {{ $message }}
+            @enderror
             </div>
           </div>
         </div>
@@ -140,7 +153,9 @@
               <textarea name="content" placeholder="お問い合わせ内容をご記載ください"></textarea>
             </div>
             <div class="form__error">
-              
+            @error('content')
+              {{ $message }}
+            @enderror
             </div>
           </div>
         </div>
