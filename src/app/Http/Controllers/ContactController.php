@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Contact;
 
 class ContactController extends Controller
 {
@@ -16,9 +17,11 @@ class ContactController extends Controller
         $contact = $request->only(['first_name', 'last_name', 'gender', 'email', 'tel', 'address', 'building', 'select','content']);
         return view('confirm', compact('contact'));
     }
-    public function store()
+    public function store(Request $request)
     {
-        return view('thanks');//表示のためだけに入れたので後で修正すること
+        $contact = $request->only(['first_name', 'last_name', 'gender', 'email', 'tel', 'address', 'building', 'select','content']);
+        Contact::create($contact);
+        return view('thanks');
     }
 }
 

@@ -1,4 +1,114 @@
-.header {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #4a4a4a;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #7b6b5b;
+}
+
+.logout-button {
+    background: none;
+    border: none;
+    color: #d3c7b9;
+    font-size: 14px;
+}
+
+main {
+    margin-top: 20px;
+}
+
+main h2 {
+    font-size: 20px;
+    color: #7b6b5b;
+}
+
+.search-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.search-area input,
+.search-area select,
+.search-area button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #d3c7b9;
+}
+
+.search-button,
+.reset-button {
+    background-color: #d3c7b9;
+    color: white;
+    border: none;
+}
+
+.export-button {
+    background-color: #d3c7b9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table thead {
+    background-color: #a89d90;
+    color: white;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.detail-button {
+    background-color: #e0d7c3;
+    border: none;
+    padding: 5px 10px;
+}
+
+.pagination {
+    text-align: center;
+}
+
+.pagination span {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px 10px;
+    color: #7b6b5b;
+}
+
+
+/*.header {
     background: #000;
 }
 
@@ -173,3 +283,4 @@
     color: #fff;
     cursor: pointer;
 }
+*/

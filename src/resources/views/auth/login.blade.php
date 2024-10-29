@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
   <link rel="stylesheet" href="{{ asset('css/common.css') }}">
   <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -25,9 +28,6 @@
           <ul class="header-nav">
             @if (Auth::check())
             <li class="header-nav__item">
-              <a class="header-nav__link" href="/mypage">マイページ</a>
-            </li>
-            <li class="header-nav__item">
               <form class="form" action="/logout" method="post">
                 @csrf
                 <button class="header-nav__button">ログアウト</button>
@@ -41,10 +41,10 @@
   </header>
 
 <main>
-<div class="login__content">
   <div class="login-form__heading">
     <h2>Login</h2>
   </div>
+  <div class="login-form__content">
   <form class="form" action="/login" method="post">
     @csrf
     <div class="form__group">

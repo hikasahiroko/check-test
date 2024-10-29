@@ -17,8 +17,8 @@ use App\Http\Controllers\AuthController;
 
 Route::get('/', [ContactController::class, 'index']);
 Route::post('/confirm', [ContactController::class, 'confirm']);
+Route::post('/thanks', [ContactController::class, 'store']);
 Route::get('/admin', [AuthController::class, 'index']);
 Route::middleware('auth')->group(function () {
     Route::get('/admin', [AuthController::class, 'index']);
 });
-Route::get('/thanks', [ContactController::class, 'store']);//表示するためだけに追加したため後で削除すること
