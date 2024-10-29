@@ -1,36 +1,56 @@
-.thanks__background {
+body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
 }
 
-.button {
-    margin: 0 auto;
-    width: 140px;
-    height: 46px;
-    text-align: center;
-    line-height: 46px;
-    gap: 10px;
-    opacity: 0px;
-    background: #82756A;
-}
 
-.button__logo {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 24px;
+.background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20vw;
+    color: #8B7969;
+    opacity: 0.05;
+    white-space: nowrap;
+    z-index: 0;
 }
 
 .thanks__content {
-    margin: 30% auto;
-    padding: 30px 15px;
-    max-width: 1230px;
-    align-items: center;
+    position: relative;
+    text-align: center;
+    z-index: 1;
 }
 
-.thanks__heading {
+.thanks__content p {
     color: #8B7969;
     margin-bottom: 40px;
-    text-align: center;
+    font-size: 24px;
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
+.button__logo {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #8B7969;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/*text-decoration: none;

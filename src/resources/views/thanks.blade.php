@@ -8,20 +8,17 @@
   <title>Contact Form</title>
   <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
   <link rel="stylesheet" href="{{ asset('css/thanks.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <main>
-    <p class="thanks__logo">Thank you</p>
+    <div class="background-text">Thank you</div>
     <div class="thanks__content">
-      <div class="thanks__heading">
-        <h2>お問い合わせありがとうございました</h2>
-      </div>
-      <div class="button">
-        <a class="button__logo" href="/">
-          Home
-        </a>
-      </div>
+        <p>お問い合わせありがとうございました</p>
+        <button class="button__logo" onclick="location.href='/'">Home</button>
     </div>
   </main>
 </body>
